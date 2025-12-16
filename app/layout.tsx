@@ -12,9 +12,21 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Novacrust Labs",
   description: "simple crypto checkout experience",
-  icons: {
-    icon: "/NovacrustLogo.png",
-  }
+  openGraph: {
+    title: "Novacrust Labs",
+    description: "simple crypto checkout experience",
+    url: "https://novacrust-labs.vercel.app",
+    siteName: "Novacrust Labs",
+    images: [
+      {
+        url: "/NovacrustLogo.png",
+        width: 1200,
+        height: 630,
+        alt: "Novacrust Labs",
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
