@@ -4,13 +4,19 @@ import CryptoToCashForm from "@/components/CryptoToCashForm"
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <div className="bg-white shadow-sm w-full max-w-lg p-6 rounded-lg space-y-6 my-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center px-2 md:px-4">
+      <div className="bg-white shadow-sm w-full max-w-lg p-3 md:p-6 rounded-lg space-y-6 my-0 md:my-4">
         <Tabs defaultValue="cryptoToCash" className="w-full">
-          <TabsList className="mb-4 mx-auto">
-            <TabsTrigger value="cryptoToCash">Crypto to cash</TabsTrigger>
-            <TabsTrigger value="cashToCrypto">Cash to crypto</TabsTrigger>
-            <TabsTrigger value="cryptoToFiatLoan">Crypto to fiat loan</TabsTrigger>
+          <TabsList className="flex overflow-x-auto mx-auto h-fit gap-0 mb-4 items-center justify-center">
+            <TabsTrigger value="cryptoToCash" className="text-xs sm:text-base">
+              Crypto to cash
+            </TabsTrigger>
+            <TabsTrigger value="cashToCrypto" className="text-xs sm:text-base">
+              Cash to crypto
+            </TabsTrigger>
+            <TabsTrigger value="cryptoToFiatLoan" className="text-xs sm:text-base">
+              Crypto to fiat loan
+            </TabsTrigger>
           </TabsList>
 
           {/* Functional tab */}
