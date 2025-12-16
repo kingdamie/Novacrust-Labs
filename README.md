@@ -1,8 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Assessment – React / Next.js
 
-## Getting Started
+This project is a frontend-only implementation built with Next.js and React, focused on clean UI, component structure, and client-side state handling.
 
-First, run the development server:
+## Setup Instructions
+
+### Prerequisites
+ - Node.js (v18 or later recommended)
+ - npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/kingdamie/Novacrust-Labs
+cd <project-folder>
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Start the development server:
 
 ```bash
 npm run dev
@@ -10,27 +35,53 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open the app in your browser:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Build for Production
 
-## Learn More
+```bash
+npm run build
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Assumptions & Trade-offs
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Assumptions
+- This is a frontend-only assessment; no backend or API integration is required.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- All selectable data (e.g., banks, wallets, dropdown options) is handled using local static data (JSON/constants).
 
-## Deploy on Vercel
+- Navigation and page transitions are handled using Next.js App Router.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Form validation is lightweight and handled on the client side.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Trade-offs
+- No API calls: Real-world API integration (loading states, retries, error handling) is intentionally omitted to keep the scope focused on UI and state logic.
+
+- Mock data: Static data is used instead of live endpoints, which limits real-time accuracy but improves predictability and simplicity.
+
+- Minimal persistence: Form data is stored in component state only (no database or localStorage persistence unless explicitly required).
+
+- Performance optimizations such as memoization and virtualization are kept minimal due to the project’s small scale.
+
+
+## Tech Stack
+- Next.js (App Router)
+
+- React
+
+- TypeScript
+
+- Tailwind CSS
+
+- shadcn/ui components
+
+## Notes
+
+This project prioritizes code clarity, component reuse, and UI accuracy over backend complexity. The structure is intentionally simple to allow easy extension if APIs or persistent storage are introduced
