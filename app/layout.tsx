@@ -12,6 +12,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Novacrust Labs",
   description: "simple crypto checkout experience",
+  icons: {
+    icon: "/NovacrustLogo.png",
+  },
   openGraph: {
     title: "Novacrust Labs",
     description: "simple crypto checkout experience",
